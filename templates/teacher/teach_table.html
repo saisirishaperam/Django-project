@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Details</title>
+    <link rel="stylesheet" href="{% static 'teacher/teach.css' %}">
+</head>
+<body>
+    <h1>👩‍🏫 Teacher Details</h1>
+
+    <div class="actions">
+        <a href="{% url 'display1' %}" class="btn">🏠 Home</a>
+        <a href="{% url 'teach_form1' %}" class="btn add">➕ Add New Teacher</a>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for x in data %}
+            <tr>
+                <td>{{x.teach_id}}</td>
+                <td>{{x.teach_name}}</td>
+                <td>{{x.teach_email}}</td>
+                <td>{{x.teach_age}}</td>
+                <td>{{x.teach_gender}}</td>
+                <td>{{x.teach_mobile}}</td>
+                <td>{{x.teach_address}}</td>
+                <td><a href="{% url 'teach_up1' x.id %}">✏️ Edit</a></td>
+                <td><a href="{% url 'teach_del1' x.id %}" onclick="return confirm('Conform to Delete?')" >🗑️ Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

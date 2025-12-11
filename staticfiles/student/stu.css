@@ -1,0 +1,126 @@
+/* ---------- Global Styling ---------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Background image with light overlay */
+    background: 
+        /* linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), */
+        url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------- Page Header ---------- */
+h1 {
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #0d47a1;
+    text-align: center;
+}
+
+/* ---------- Buttons (Home + Add) ---------- */
+.actions {
+    margin: 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #1976d2;
+    color: white;
+    border-radius: 8px;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0d47a1;
+}
+
+.btn.add {
+    background: #388e3c;
+}
+
+.btn.add:hover {
+    background: #1b5e20;
+}
+
+/* ---------- Table Container ---------- */
+.table-container {
+    background: rgba(255, 255, 255, 0.77);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    max-width: 90%;
+    overflow-x: auto;
+}
+
+/* ---------- Table Styling ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1976d2;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e3f2fd;
+    transition: 0.3s ease;
+}
+
+/* ---------- Links inside table ---------- */
+td a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+td a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
